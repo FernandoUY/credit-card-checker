@@ -5,8 +5,6 @@ const valid3 = [3, 7, 1, 6, 1, 2, 0, 1, 9, 9, 8, 5, 2, 3, 6]
 const valid4 = [6, 0, 1, 1, 1, 4, 4, 3, 4, 0, 6, 8, 2, 9, 0, 5]
 const valid5 = [4, 5, 3, 9, 4, 0, 4, 9, 6, 7, 8, 6, 9, 6, 6, 6]
 
-const valid6 = [4, 5, 5, 6, 7, 3, 7, 5, 8, 6, 8, 9, 9, 8, 5, 5]
-
 // All invalid credit card numbers
 const invalid1 = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5]
 const invalid2 = [5, 7, 9, 5, 5, 9, 3, 3, 9, 2, 1, 3, 4, 6, 4, 3]
@@ -56,11 +54,11 @@ function findInvalidCards(arr){
     const invalidCards = [];
     for(let card of arr){
         if(!validateCred(card)){
-            invalidCards.push(card)
+            invalidCards.push(card);
         }
     }
 
-    return invalidCards
+    return invalidCards;
 }
 
 function idInvalidCardCompanies(arr) {
@@ -84,11 +82,10 @@ function idInvalidCardCompanies(arr) {
             }
         } else {
             if(companies.indexOf('Company not found') === -1){
-                companies.push('Company not found')
+                companies.push('Company not found');
             }
         }
     }
 
     return companies;
 }
-console.log(idInvalidCardCompanies([[4,5,6,7,3,3,2,2],[3,5,5,3,4,6,3], [5,3,3,2,1,4,6,4], [4,3,2,4,5,2,5,3,5], [5,4,3,5,6,3,5], [7,6,5,4,7,3,5]]))
